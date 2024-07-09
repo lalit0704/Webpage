@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lalit's Web Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Lalit's Simple Web Page</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="/submissions">View Submissions</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Welcome!</h2>
+        <p>This is a simple web page created by Lalit Kumar. Here you can find some information about the submissions and how to get in touch.</p>
+        <form action="/submit" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>Contact us at: <a href="lalitt0407@gmail.com">lalitt0407@gmail.com</a></p>
+    </footer>
+</body>
+</html>
+
